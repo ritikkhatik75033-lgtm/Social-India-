@@ -1,0 +1,87 @@
+/* Body + Background */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #FF9933, #FFFFFF, #138808);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* Glass Card Container */
+.container {
+  width: 380px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+/* Logo Branding */
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #138808;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  margin-bottom: 15px;
+}
+
+/* Headings and Paragraphs */
+h1 {
+  color: #FF9933;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+p {
+  color: white;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+/* Buttons */
+button {
+  padding: 12px 25px;
+  border-radius: 12px;
+  border: none;
+  background: #0066cc;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+/* Feed Cards */
+#feed {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#feed p {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  color: #333;
+  font-weight: 600;
+  border-left: 6px solid #FF9933; /* saffron accent */
+}
