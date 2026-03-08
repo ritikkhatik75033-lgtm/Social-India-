@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social India - Login</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social India | Welcome</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
 </head>
 <body>
-  <div class="container">
-    <div class="logo">Ritik Developer</div>
-    <h1>Social India</h1>
-    <p>Login with Telegram to access your feed</p>
 
-    <!-- Telegram login button -->
-    <script async src="https://telegram.org/js/telegram-widget.js?22"
-      data-telegram-login="ritikdeveloperbot"
-      data-size="large"
-      data-onauth="onTelegramAuth(user)">
-    </script>
-  </div>
+    <div class="login-container">
+        <h1>🔱 Social India 🔱</h1>
+        <p>Connect with your world</p>
 
-  <script src="script.js"></script>
+        <div id="telegram-login">
+            <script async src="https://telegram.org/js/telegram-widget.js?22" 
+                data-telegram-login="ritikdeveloperbot" 
+                data-size="large" 
+                data-userpic="true"
+                data-onauth="onTelegramAuth(user)" 
+                data-request-access="write">
+            </script>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
