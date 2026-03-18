@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Social India 🔥</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: linear-gradient(135deg, #ff9933, #000);
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      padding: 15px;
+      font-size: 22px;
+      font-weight: bold;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .card {
+      margin: 20px;
+      padding: 20px;
+      border-radius: 15px;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background: #ff9933;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>🇮🇳 Social India</header>
+
+<div class="card">
+  <h2>Welcome Ritik 🔥</h2>
+  <p id="status">Connecting Firebase...</p>
+  <button onclick="testClick()">Click Me</button>
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCXEKf_9iJbH-rBAGY3pFbMTzbYpXOICIY",
+  authDomain: "social-india-8e720.firebaseapp.com",
+  databaseURL: "https://social-india-8e720-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "social-india-8e720",
+  storageBucket: "social-india-8e720.firebasestorage.app",
+  messagingSenderId: "550357112046",
+  appId: "1:550357112046:web:0338532d8f2f8e1501cfff",
+  measurementId: "G-WJQVDJJ33M"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
+document.getElementById("status").innerText = "Firebase Connected ✅";
+
+// Test function
+window.testClick = function () {
+  set(ref(db, 'test/message'), {
+    text: "Hello from Social India 🔥"
+  });
+  alert("Data Sent to Firebase 🚀");
+};
+</script>
+
+</body>
+</html>
